@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #bb2bc3e0;
+    --secondary-color: #dde388;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    /* background: linear-gradient(to bottom, #e18ce6, #e16fe7); */
+    /* transition: background 0.5s ease-in-out; */
+}
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    /* transition: background 0.5s ease-in-out; */
+}
+
+nav span{
+    padding-left: 20px;
+    color:var(--secondary-color);
+    font-weight: 600;
+    font-size: 25px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    border: 2px solid var(--secondary-color);
+    padding:8px;
+    margin-right: 20px;
+}
+
+nav a {
+    color: var(--secondary-color) ;
+    font-weight: 600;
+    text-decoration: none;
+    /* transition: color 0.5s ease-in-out; */
+}
+
+nav a:hover {
+    color: #6e426b;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+#heading {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    color: var(--secondary-color);
+    letter-spacing: -3px;
+    line-height: 80px;
+    max-width: 800px;
+}
+
+#description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    color: var(--secondary-color);
+    padding-top: 1rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Add animations to elements */
+#heading, #description {
+    animation: fade-in 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+nav {
+    animation: slide-in 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+footer {
+    animation: fade-in 0.7s ease-in forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+footer{
+    display: flex;
+    color: var(--secondary-color);
+    gap: 0.8rem;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+}
+.socialLinks{
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    color: var(--secondary-color);
+}
